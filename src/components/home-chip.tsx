@@ -1,5 +1,5 @@
 import { ReactElement, useState } from "react";
-import { Chip01 } from '../styled-components/chips.ts'
+import { Chip01 } from '../styled-components/chips'
 
 interface HomeChipProps {
     color?: string

@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import HomeChip from "./components/home-chip.tsx";
+import HomeChip from "./components/home-chip";
 
 const App = (): ReactElement => {
   return (
