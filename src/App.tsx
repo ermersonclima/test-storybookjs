@@ -1,13 +1,13 @@
 import { ReactElement } from "react";
-import HomeChip from "./components/home-chip";
+import TransformCaseChip from "./components/transform-case-chip";
 
 const App = (): ReactElement => {
   return (
     <>
-      <HomeChip />
-      <HomeChip color='#f00' />
-      <HomeChip color='#0f0' />
-      <HomeChip color='#00f' />
+      <TransformCaseChip />
+      <TransformCaseChip color='#f00' />
+      <TransformCaseChip color='#0f0' />
+      <TransformCaseChip color='#00f' />
     </>
   )
 }
