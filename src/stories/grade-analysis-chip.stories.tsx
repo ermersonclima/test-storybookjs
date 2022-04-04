@@ -15,3 +15,17 @@ Default.args = {
   label: '',
   grade: 0
 }
+
+export const Math = Template.bind({})
+
+Math.args = {
+  label: 'Math',
+  grade: 6
+}
+
+export const History = Template.bind({})
+
+History.args = {
+  label: 'History',
+  grade: 5
+}
