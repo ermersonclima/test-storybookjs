@@ -1,4 +1,4 @@
-import { jsonPlaceholderApi } from "../apis/jsonplaceholder.api";
+import { jsonPlaceholderApi } from "../apis/json-placeholder.api";
 import { pokemonApi } from "../apis/pokemon.api";
 
 const reducers = {

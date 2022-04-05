@@ -32,7 +32,7 @@ interface GetPostByIdResults {
 }
 
 export const jsonPlaceholderApi = createApi({
-  reducerPath: 'jsonPlaceholder',
+  reducerPath: 'json_placeholder',
   keepUnusedDataFor: 60,
   baseQuery: fetchBaseQuery({ baseUrl: 'https://jsonplaceholder.typicode.com/' }),
   endpoints: (builder) => ({
