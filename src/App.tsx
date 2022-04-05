@@ -6,10 +6,7 @@ const App = (): ReactElement => {
   return (
     <>
       <GradeAnalysisChip grade={0} />
-      <TransformCaseChip />
-      <TransformCaseChip color='#f00' />
-      <TransformCaseChip color='#0f0' />
-      <TransformCaseChip color='#00f' />
+      <TransformCaseChip label="Storybook" />
     </>
   )
 }
