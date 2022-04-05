@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const Chip01 = styled.span`
+interface ChipsProps {
+  color?: string
+}
+
+export const Chip01 = styled.span<ChipsProps>`
   transition: 400ms;
   display: inline-block;
   color: ${props => props.color || '#000'};
