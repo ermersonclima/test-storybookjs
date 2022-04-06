@@ -6,12 +6,12 @@ interface BoxFieldProps {
     title?: string
 }
 
-const BoxField = ({children, title}: BoxFieldProps): ReactElement => {
+const BoxField = (props: BoxFieldProps): ReactElement => {
     return (
         <Box01 width="1000px" height='500px' align="center">
             <Box01 align='left'>
-                <span>{title || null}</span>
-                {children}
+                <span>{props.title || null}</span>
+                {props.children}
             </Box01>
         </Box01>
     )
