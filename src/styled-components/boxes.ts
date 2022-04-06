@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 interface BoxesProps {
-  color?: string
-  width?: string
-  height?: string
-  curve?: boolean
-  align: "center" | "right" | "left"
+  color?: string;
+  width?: string;
+  height?: string;
+  curve?: boolean;
+  align: "center" | "right" | "left";
 }
 
 export const Box01 = styled.div<BoxesProps>`
@@ -21,14 +21,14 @@ export const Box01 = styled.div<BoxesProps>`
   text-align: ${(props) => {
     switch (props.align) {
       case "center":
-        return "center"
+        return "center";
       case "right":
-        return "right"
+        return "right";
       case "left":
-        return "left"
+        return "left";
     }
   }};
-  ${(props) => props.align === 'center' ? ('margin: auto') : null}
+  ${(props) => (props.align === "center" ? "margin: auto" : null)}
 `;
 
 export const Box02 = styled.input<Partial<BoxesProps>>`
