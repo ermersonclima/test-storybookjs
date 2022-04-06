@@ -30,3 +30,8 @@ export const Box01 = styled.div<BoxesProps>`
   }};
   ${(props) => props.align === 'center' ? ('margin: auto') : null}
 `;
+
+export const Box02 = styled.input<Partial<BoxesProps>>`
+  margin-right: 8px;
+  margin-left: 8px;
+`;
