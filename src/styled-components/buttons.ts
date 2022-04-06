@@ -21,6 +21,11 @@ export const Button01 = styled.input<ButtonsProps>`
     }};
     border: solid black 1px;
     border-radius: 4px;
-    width: ${props => props.width || '80px'}
-    height: ${props => props.height || '20px'}   
+    width: ${props => props.width || '80px'};
+    height: ${props => props.height || '20px'};
+    &:hover {
+        cursor: pointer;
+        border: solid #444 1px;
+        color: #444;
+    }
 `;
