@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 import { Button01 } from '../styled-components/buttons'
-import { Box01 } from '../styled-components/boxes'
+import { Box01, Box02 } from '../styled-components/boxes'
 
 interface SearchBarProps {
     value: string
@@ -8,8 +8,8 @@ interface SearchBarProps {
 
 const SearchBar = (props: SearchBarProps): ReactElement => {
     return (
-        <Box01 align="center" width="75%" height='20px'>
-            <input type="text" />
+        <Box01 align="left" width="75%" height='20px'>
+            <Box02 type="text" />
             <Button01 type="button" color="success" value={props.value} />
         </Box01>
     )
