@@ -1,15 +1,25 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import BoxField from "./components/box-field";
 import SearchBar from "./components/search-bar";
 import ResultField from "./components/result-field";
 import { useGetPokemonByNameQuery } from "./store/apis/pokemon.api";
 
+interface PokeInfoProps {
+  name?: string;
+  imagePath?: string;
+}
+
 const App = (): ReactElement => {
+  const [pokeInfo, setPokeInfo] = useState<PokeInfoProps | null>(null);
+
   // directly param to test the hook
   const { data } = useGetPokemonByNameQuery("ditto");
 
   const searchPokemon = () => {
-    console.log(data);
+    setPokeInfo({
+      name: data.name,
+      imagePath: data.sprites.front_default,
+    });
   };
 
   return (
@@ -17,7 +27,14 @@ const App = (): ReactElement => {
       <BoxField title="Find pokemon info by name">
         <>
           <SearchBar value="Search" action={searchPokemon} />
-          <ResultField />
+          {pokeInfo ? (
+            <ResultField>
+              <figure>
+                <img src={pokeInfo.imagePath} alt={`${pokeInfo.name} sprite`} />
+                <figcaption>{`${pokeInfo.name} front image sprite`}</figcaption>
+              </figure>
+            </ResultField>
+          ) : null}
         </>
       </BoxField>
     </>
