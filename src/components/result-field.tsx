@@ -7,7 +7,7 @@ interface ResultFieldProps {
 
 const ResultField = (props: ResultFieldProps): ReactElement => {
   return (
-    <Box01 width="75%" height="20px" align="left" curve>
+    <Box01 width="50%" height="50%" align="left" curve>
       {props.children}
     </Box01>
   );
