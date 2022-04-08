@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reducers from "./reducers";
+import apiReducers from "./reducers";
 
 const store = configureStore({
-  reducer: reducers,
+  reducer: apiReducers,
 });
 
 export default store;
