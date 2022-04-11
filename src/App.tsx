@@ -1,8 +1,11 @@
 import { ReactElement, useState } from "react";
+import { useSelector } from "react-redux";
 import BoxField from "./components/box-field";
 import SearchBar from "./components/search-bar";
 import ResultField from "./components/result-field";
 import { useGetPokemonByNameQuery } from "./store/apis/pokemon.api";
+import { handleOnChange } from "./store/reducers/pokemon-name";
+
 
 interface PokeInfoProps {
   name?: string;
@@ -10,10 +13,10 @@ interface PokeInfoProps {
 }
 
 const App = (): ReactElement => {
+  const { name } = useSelector((state: any) => state.pokemon_name);
   const [pokeInfo, setPokeInfo] = useState<PokeInfoProps | null>(null);
 
-  // directly param to test the hook
-  const { data } = useGetPokemonByNameQuery("ditto");
+  const { data } = useGetPokemonByNameQuery(name);
 
   const searchPokemon = () => {
     setPokeInfo({
@@ -26,7 +29,11 @@ const App = (): ReactElement => {
     <>
       <BoxField title="Find pokemon info by name">
         <>
-          <SearchBar value="Search" action={searchPokemon} />
+          <SearchBar
+            value="Search"
+            action={searchPokemon}
+            change={handleOnChange}
+          />
           {pokeInfo ? (
             <ResultField>
               <figure>
