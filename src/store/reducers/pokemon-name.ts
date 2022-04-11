@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export const pokemonName = createSlice({
   name: "pokemon_name",
@@ -6,8 +6,8 @@ export const pokemonName = createSlice({
     name: "",
   },
   reducers: {
-    handleOnChange: (state) => {
-      state.name = "ditto";
+    handleOnChange: (state, action: PayloadAction<string>) => {
+      state.name = action.payload;
     },
   },
 });
