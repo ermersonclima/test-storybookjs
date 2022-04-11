@@ -1,9 +1,5 @@
-import { combineReducers } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
-import apiReducers from "./reducers";
-import { pokemonName } from "./reducers/pokemon-name";
-
-const reducers = combineReducers({ ...apiReducers, ...pokemonName.reducer });
+import reducers from "./reducers";
 
 const store = configureStore({
   reducer: reducers,
